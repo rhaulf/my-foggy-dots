@@ -1,0 +1,31 @@
+@import "config.rasi" /* Importăm baza ca să nu scriem totul iar */
+
+window {
+    width:          600px;
+    height:         160px;
+    location:       center;
+    anchor:         center;
+    border:         2px solid;
+    border-color:   @hl-color; /* Verdele tău foggy */
+}
+
+mainbox {
+    children: [ "listview" ]; /* Scoatem bara de search, nu ne trebuie aici */
+}
+
+listview {
+    columns:        4; /* Le punem unul lângă altul */
+    lines:          1;
+    spacing:        15px;
+    layout:         vertical;
+}
+
+element {
+    padding:        25px 10px;
+    border-radius:  @b-radius;
+}
+
+element-text {
+    horizontal-align: 0.5; /* Centrăm textul */
+    font: "Figtree 15";
+}

@@ -1,0 +1,24 @@
+[general]
+# Viteza de reacție (mai mare = mai fluid)
+framerate = 60
+# Sensibilitatea (ajustează dacă barele sunt prea mici/mari)
+sensitivity = 100
+
+[smoothing]
+# Face barele să se miște "moale", nu sacadat
+integral = 77
+monstercat = 1
+waves = 0
+
+[color]
+# Folosim exact verdele tău foggy gri
+gradient = 1
+gradient_count = 2
+gradient_color_1 = '#839496'
+gradient_color_2 = '#586e75' 
+
+[display]
+# Stilul barelor. 'ascii' e clasic, 'blank' e mai curat
+method = ncurses
+# Caracterul folosit pentru bare (cel mai plin/solid)
+ascii_max_range = 7

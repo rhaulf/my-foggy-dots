@@ -1,0 +1,9 @@
+theme = Atom
+background-opacity = 0.85
+background-blur-radius = 20
+font-family = "FiraCode Nerd Font"
+font-size = 12
+window-decoration = false
+window-padding-x = 15
+window-padding-y = 15
+

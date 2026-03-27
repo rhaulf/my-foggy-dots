@@ -1,0 +1,117 @@
+* {
+    /* Font minimalist */
+    font: "Figtree 13";
+    
+    /* Configurație spațiere */
+    g-spacing: 10px;
+    g-margin: 0;
+    b-radius: 12px;
+    g-padding: 8px;
+
+    /* PALETA FOGGY GREEN & BEJ */
+    /* Fundal fereastră: un gri-verzui închis, foarte transparent pentru BLUR */
+    wbg-color: #1a1b2699; 
+    
+    /* Border: Verdele tău foggy (#839496) cu opacitate mică */
+    w-border-color: #83949666;
+    w-border: 2px solid;
+    w-padding: 12px;
+
+    /* Text normal: Bej desaturat/alb mat */
+    fg-color: #d1d1c1; 
+    
+    /* Placeholder: Verde-gri închis */
+    fgp-color: #586e75; 
+
+    /* SELECȚIE: Verdele tău iconic ca fundal, textul devine un bej foarte deschis */
+    hl-color: #839496;   /* Verdele tău foggy */
+    hlt-color: #f0f0e0;  /* Bej luminos pentru contrast la selecție */
+    
+    /* Rânduri alternate: Aproape invizibile pentru look minimalist */
+    alt-color: #24283b33; 
+}
+
+configuration {
+    modi: "drun";
+    show-icons: false; /* Scoaterea iconițelor ajută la look-ul foggy/text-only */
+    display-drun: "󰁔";
+}
+
+window {
+    transparency: "real";
+    width: 450px;
+    border-radius: @b-radius;
+    background-color: @wbg-color;
+    border: @w-border;
+    border-color: @w-border-color;
+    padding: @w-padding;
+}
+
+/* Restul structurii rămâne identic, dar culorile se trag din paleta nouă */
+
+mainbox {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    background-color: transparent;
+    children: ["inputbar", "listview"];
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @g-spacing;
+    background-color: transparent;
+}
+
+prompt {
+    text-color: @hl-color; /* Săgeata e verde foggy */
+    background-color: transparent;
+}
+
+entry {
+    placeholder: "Search Apps...";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+    background-color: transparent;
+}
+
+listview {
+    columns: 1;
+    lines: 7;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px;
+    background-color: transparent;
+}
+
+element {
+    spacing: @g-spacing;
+    margin: @g-margin;
+    padding: @g-padding;
+    border-radius: @b-radius;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element alternate.normal {
+    background-color: @alt-color;
+    text-color: @fg-color;
+}
+
+element selected.normal {
+    background-color: @hl-color;
+    text-color: @hlt-color;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
